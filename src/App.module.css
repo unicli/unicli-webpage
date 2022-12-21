@@ -1,0 +1,168 @@
+.main {
+  background-color: #181818;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 36px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.logo {
+  position: relative;
+  padding: 0 30px;
+}
+
+.logoRoot {
+  width: 150px;
+  height: 150px;
+}
+
+.particle1,
+.particle2 {
+  position: absolute;
+  animation: particle 2s ease infinite;
+}
+
+.particle1 {
+  top: 30px;
+  right: 0;
+}
+
+.particle2 {
+  bottom: 30px;
+  left: 0;
+  transform: scale(0);
+  animation-delay: 0.75s;
+}
+
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.label {
+  font-size: 96px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.version {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 7px;
+}
+
+.getStarted {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #fefefe;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 6px 18px;
+  transition: color 0.1s ease;
+}
+
+.getStarted::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-top: 2px solid #fefefe;
+  border-right: 2px solid #fefefe;
+  transform: translateY(-50%) rotate(45deg);
+  transition: right 0.15s ease;
+}
+
+.getStarted:hover::after {
+  right: -7px;
+}
+
+.getStarted:active {
+  color: #aaa;
+}
+
+.getStarted:active::after {
+  border-color: #aaa;
+}
+
+@keyframes particle {
+  0%,
+  100% {
+    transform: scale(0) rotate(0deg);
+  }
+  10% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0) rotate(50deg);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .brand {
+    flex-direction: column;
+  }
+
+  .label {
+    font-size: 64px;
+  }
+
+  .version {
+    margin-right: 4px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .label {
+    font-size: 48px;
+  }
+
+  .version {
+    margin-right: 2px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .logoRoot {
+    width: 100px;
+    height: 100px;
+  }
+
+  .label {
+    font-size: 32px;
+  }
+
+  .version {
+    margin-right: 1px;
+  }
+
+  .getStarted {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 250px) {
+  .label {
+    font-size: 24px;
+  }
+
+  .version {
+    margin-right: 0px;
+  }
+}

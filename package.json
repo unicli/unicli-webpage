@@ -1,0 +1,26 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "prettier": "@giveerr/prettier-config",
+  "license": "MIT",
+  "devDependencies": {
+    "@giveerr/eslint-config": "^2.1.0",
+    "@giveerr/eslint-config-prettier-javascript": "^2.1.0",
+    "@giveerr/eslint-config-prettier-typescript": "^2.1.0",
+    "@giveerr/eslint-config-prettier-solid": "^2.1.0",
+    "@giveerr/prettier-config": "^2.1.0",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vite-plugin-solid": "^2.3.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.5.1"
+  }
+}
